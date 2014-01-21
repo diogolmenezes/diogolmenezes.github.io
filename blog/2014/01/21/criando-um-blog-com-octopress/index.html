@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>dmenezes</title>
+  <title>Creating a blog with Octopress - dmenezes</title>
   <meta name="author" content="Diogo Menezes">
 
    
@@ -19,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://diogolmenezes.github.io">
+  <link rel="canonical" href="http://diogolmenezes.github.io/blog/2014/01/21/criando-um-blog-com-octopress">
   <link href="/favicon.png" rel="icon">
   <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
@@ -48,7 +48,7 @@
   	  	<div class="nav-collapse collapse navbar-responsive-collapse" style="height:0;">
   	      <ul class="nav">
     
-        <li class="active"><a href="/index.html">Home</a></li>
+        <li ><a href="/index.html">Home</a></li>
     
         <li ><a href="/about">About</a></li>
     
@@ -83,100 +83,14 @@
   <div class="container" id="main">
       <div class="row-fluid">
         <div id="content">
-          <div class="jumbotron">
-  <div class="container">
-    
-      dmenezes
-    
-    <h3 class="tagline">
-      
-        everyday coding
-      
-    </h3>
-  </div>
-</div>
-
-
-<div class="blog-index">
-  
-  
-  
-    <article>
-      
-
-  <div class="row-fluid">
-    <div class="span2 post-meta">
-	  <h5 class="date-time">
-
-
-
-
-
-
-
-
+          <div>
+<article class="hentry" role="article">
   
 
-
-<i class="icon-calendar-empty"></i> <time datetime="2014-01-21T15:25:28-02:00" pubdate data-updated="true">Jan 21<span>st</span>, 2014</time></h5>
-          <div class="row-fluid">
-          
-          </div>
-          
-          <div class="row-fluid">
-          
-          <a href="/blog/categories/oracle/"><span class="badge">oracle</span></a>
-          
-          </div>
-          
-    </div>
-    <div class="span10 post-container">
-      <h1 class="link"><a href="/blog/2014/01/21/creating-er-diagram-with-oracle-sql-developer/">Creating ER diagram with Oracle Sql Developer</a></h1>
-      <p>Today I needed to create a ER diagram for my oracle database, and found that the Oracle Sql Developer is not so intuitive for this task.</p>
-
-<p>First you will have to open Oracle Sql Developer and go to:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>File → Data Modeler → Import → Data Dictionary → select DB connection (or add if none) → Next → select your schema and tables</span></code></pre></td></tr></table></div></figure>
-
-
-<p><img src="/images/posts/diagram-sql-developer-1.png" alt="Alt text" /></p>
-
-<h2>Updating the diagram</h2>
-
-<p>If after making the diagram, you want to change it with the most recently database changes, you will need to select the changed table, click the right mouse button and choose Synchronize with Data Dictionary.</p>
-
-<p><img src="/images/posts/diagram-sql-developer-2.png" alt="Alt text" /></p>
-
-<h2>Exporting the diagram</h2>
-
-<p>For export the diagram to image, PDF or SVG, you have to go to:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>File → Data Modeler → Print Diagram → and chose you option </span></code></pre></td></tr></table></div></figure>
-
-
-<p><img src="/images/posts/diagram-sql-developer-3.png" alt="Alt text" /></p>
-
-      
-      
-    </div>
-  </div>
-
-
-
-    </article>
-    
-    <hr>
-    
-  
-  
-    <article>
-      
-
-  <div class="row-fluid">
-    <div class="span2 post-meta">
-	  <h5 class="date-time">
+  <header>
+  <div class="jumbotron">
+    Creating a Blog With Octopress
+	<h5>
 
 
 
@@ -189,23 +103,10 @@
 
 
 <i class="icon-calendar-empty"></i> <time datetime="2014-01-21T00:17:04-02:00" pubdate data-updated="true">Jan 21<span>st</span>, 2014</time></h5>
-          <div class="row-fluid">
-          
-          </div>
-          
-          <div class="row-fluid">
-          
-          <a href="/blog/categories/jekyll/"><span class="badge">jekyll</span></a>
-          
-          <a href="/blog/categories/octopress/"><span class="badge">octopress</span></a>
-          
-          <a href="/blog/categories/ruby/"><span class="badge">ruby</span></a>
-          
-          </div>
-          
-    </div>
-    <div class="span10 post-container">
-      <h1 class="link"><a href="/blog/2014/01/21/criando-um-blog-com-octopress/">Creating a blog with Octopress</a></h1>
+  </div>
+</header>
+  <div class="row-fluid">
+    <div class="span12">
       <p><a href="http://octopress.org/">Octopress</a> is a cool framework for <a href="https://github.com/jekyll/jekyll">jekyll</a>
 a blog-aware, static site generator in <a href="https://www.ruby-lang.org/pt/">Ruby</a> that allows you to create a static site based in templates, and markdowns files.</p>
 
@@ -360,80 +261,76 @@ a blog-aware, static site generator in <a href="https://www.ruby-lang.org/pt/">R
 
 <p>If you have questions, comments or suggestions about this article, let me know.</p>
 
-      
-      
     </div>
   </div>
 
 
 
-    </article>
-    
+  <footer>
     <hr>
     
+    <div class="row-fluid">
+      
+      <div class="span6">
+        <p class="meta">
+        
+        
+
+
+
+  <a href="/blog/categories/jekyll/"><span class="badge">jekyll</span></a>
+
+  <a href="/blog/categories/octopress/"><span class="badge">octopress</span></a>
+
+  <a href="/blog/categories/ruby/"><span class="badge">ruby</span></a>
+
+
+
+
+        </p>
+      </div>
+      
+      <div class="span6 social-sharing">
+        <div class="sharing">
+  <div class="addthis_toolbox addthis_default_style ">
   
   
-    <article>
-      
-
-  <div class="row-fluid">
-    <div class="span2 post-meta">
-	  <h5 class="date-time">
-
-
-
-
-
-
-
-
+  <a class="addthis_button_tweet"></a>
   
-
-
-<i class="icon-calendar-empty"></i> <time datetime="2014-01-20T21:01:51-02:00" pubdate data-updated="true">Jan 20<span>th</span>, 2014</time></h5>
-          <div class="row-fluid">
-          
-          </div>
-          
-          <div class="row-fluid">
-          
-          <a href="/blog/categories/all/"><span class="badge">all</span></a>
-          
-          </div>
-          
-    </div>
-    <div class="span10 post-container">
-      <h1 class="link"><a href="/blog/2014/01/20/everything-new-again/">Everything new again</a></h1>
-      <p>After a few years without writing articles and without updating my personal website, I decided to work to revive this project.</p>
-
-<p>I want to use this space to comment about software development and everything else that might interest me.</p>
-
-<h2>Choosing new platform</h2>
-
-<p>For this project, I wanted a tool that would allow me to have a blog with minimal effort and allowing me to use <a href="http://pt.wikipedia.org/wiki/Markdown">markdown</a> to write posts.</p>
-
-<p>Looking possibilities I met the <a href="http://octopress.org/">Octopress</a> a really nice framework for <a href="https://github.com/jekyll/jekyll">Jekyll</a>, which is a <a href="https://www.ruby-lang.org/pt/">Ruby</a> tool that enables you to generate static templates from websites and markdowns.</p>
-
-<p>I am enjoying the experience because beyond the speed of deployment of the blog, create <a href="http://pt.wikipedia.org/wiki/Markdown">markdown</a> posts is spectacular.</p>
-
-<p>And you, know <a href="http://octopress.org/">Octopress</a>? What is your opinion about it?</p>
-
-      
-      
-    </div>
+  
+  <a class="addthis_counter addthis_pill_style"></a>
   </div>
-
-
-
-    </article>
-    
-  
-  <div class="pagination">
-    
-
-    
-  </div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
 </div>
+
+      </div>
+      
+      
+    </div>
+    
+    <div class="row-fluid">
+      <div class="span12">
+        <p class="meta">
+          
+            <a class="basic-alignment left" href="/blog/2014/01/20/everything-new-again/" title="Previous Post: Everything new again">&laquo; Everything new again</a>
+          
+          
+            <a class="basic-alignment right" href="/blog/2014/01/21/creating-er-diagram-with-oracle-sql-developer/" title="Next Post: Creating ER diagram with Oracle Sql Developer">Creating ER diagram with Oracle Sql Developer &raquo;</a>
+          
+        </p>
+      </div>
+    </div>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
 
 
         </div>
@@ -455,7 +352,10 @@ a blog-aware, static site generator in <a href="https://www.ruby-lang.org/pt/">R
       var disqus_shortname = 'dmenezes';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://diogolmenezes.github.io/blog/2014/01/21/criando-um-blog-com-octopress/';
+        var disqus_url = 'http://diogolmenezes.github.io/blog/2014/01/21/criando-um-blog-com-octopress/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

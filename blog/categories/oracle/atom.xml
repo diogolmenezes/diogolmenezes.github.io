@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: oracle | dmenezes]]></title>
+  <link href="http://diogolmenezes.github.io/blog/categories/oracle/atom.xml" rel="self"/>
+  <link href="http://diogolmenezes.github.io/"/>
+  <updated>2014-01-21T15:41:01-02:00</updated>
+  <id>http://diogolmenezes.github.io/</id>
+  <author>
+    <name><![CDATA[Diogo Menezes]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Creating ER diagram with Oracle Sql Developer]]></title>
+    <link href="http://diogolmenezes.github.io/blog/2014/01/21/creating-er-diagram-with-oracle-sql-developer/"/>
+    <updated>2014-01-21T15:25:28-02:00</updated>
+    <id>http://diogolmenezes.github.io/blog/2014/01/21/creating-er-diagram-with-oracle-sql-developer</id>
+    <content type="html"><![CDATA[<p>Today I needed to create a ER diagram for my oracle database, and found that the Oracle Sql Developer is not so intuitive for this task.</p>
+
+<p>First you will have to open Oracle Sql Developer and go to:</p>
+
+<p>```</p>
+
+<pre><code>File → Data Modeler → Import → Data Dictionary → select DB connection (or add if none) → Next → select your schema and tables
+</code></pre>
+
+<p>```</p>
+
+<p><img src="/images/posts/diagram-sql-developer-1.png" alt="Alt text" /></p>
+
+<h2>Updating the diagram</h2>
+
+<p>If after making the diagram, you want to change it with the most recently database changes, you will need to select the changed table, click the right mouse button and choose Synchronize with Data Dictionary.</p>
+
+<p><img src="/images/posts/diagram-sql-developer-2.png" alt="Alt text" /></p>
+
+<h2>Exporting the diagram</h2>
+
+<p>For export the diagram to image, PDF or SVG, you have to go to:</p>
+
+<p><code>
+File → Data Modeler → Print Diagram → and chose you option
+</code></p>
+
+<p><img src="/images/posts/diagram-sql-developer-3.png" alt="Alt text" /></p>
+]]></content>
+  </entry>
+  
+</feed>
