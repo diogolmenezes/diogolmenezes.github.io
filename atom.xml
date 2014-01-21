@@ -4,7 +4,7 @@
   <title><![CDATA[dmenezes]]></title>
   <link href="http://diogolmenezes.github.io/atom.xml" rel="self"/>
   <link href="http://diogolmenezes.github.io/"/>
-  <updated>2014-01-21T15:45:15-02:00</updated>
+  <updated>2014-01-21T15:53:43-02:00</updated>
   <id>http://diogolmenezes.github.io/</id>
   <author>
     <name><![CDATA[Diogo Menezes]]></name>
@@ -18,7 +18,7 @@
     <link href="http://diogolmenezes.github.io/blog/2014/01/21/creating-er-diagram-with-oracle-sql-developer/"/>
     <updated>2014-01-21T15:25:28-02:00</updated>
     <id>http://diogolmenezes.github.io/blog/2014/01/21/creating-er-diagram-with-oracle-sql-developer</id>
-    <content type="html"><![CDATA[<p>Today I needed to create a ER diagram for my oracle database, and found that the Oracle Sql Developer is not so intuitive for this task.</p>
+    <content type="html"><![CDATA[<p>Today I needed to create a ER diagram for my oracle database, and realized that the Oracle Sql Developer is not so intuitive for this task.</p>
 
 <p>First you will have to open Oracle Sql Developer and go to:</p>
 
@@ -39,7 +39,7 @@
 <p>For export the diagram to image, PDF or SVG, you have to go to:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>File → Data Modeler → Print Diagram → and chose you option </span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>File → Data Modeler → Print Diagram → and choose you option </span></code></pre></td></tr></table></div></figure>
 
 
 <p><img src="http://diogolmenezes.github.io/images/posts/diagram-sql-developer-3.png" alt="Alt text" /></p>
@@ -48,9 +48,9 @@
   
   <entry>
     <title type="html"><![CDATA[Creating a blog with Octopress]]></title>
-    <link href="http://diogolmenezes.github.io/blog/2014/01/21/criando-um-blog-com-octopress/"/>
+    <link href="http://diogolmenezes.github.io/blog/2014/01/21/creating-a-blog-with-octopress/"/>
     <updated>2014-01-21T00:17:04-02:00</updated>
-    <id>http://diogolmenezes.github.io/blog/2014/01/21/criando-um-blog-com-octopress</id>
+    <id>http://diogolmenezes.github.io/blog/2014/01/21/creating-a-blog-with-octopress</id>
     <content type="html"><![CDATA[<p><a href="http://octopress.org/">Octopress</a> is a cool framework for <a href="https://github.com/jekyll/jekyll">jekyll</a>
 a blog-aware, static site generator in <a href="https://www.ruby-lang.org/pt/">Ruby</a> that allows you to create a static site based in templates, and markdowns files.</p>
 

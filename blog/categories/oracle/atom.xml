@@ -4,7 +4,7 @@
   <title><![CDATA[Category: oracle | dmenezes]]></title>
   <link href="http://diogolmenezes.github.io/blog/categories/oracle/atom.xml" rel="self"/>
   <link href="http://diogolmenezes.github.io/"/>
-  <updated>2014-01-21T15:45:15-02:00</updated>
+  <updated>2014-01-21T15:53:43-02:00</updated>
   <id>http://diogolmenezes.github.io/</id>
   <author>
     <name><![CDATA[Diogo Menezes]]></name>
@@ -18,7 +18,7 @@
     <link href="http://diogolmenezes.github.io/blog/2014/01/21/creating-er-diagram-with-oracle-sql-developer/"/>
     <updated>2014-01-21T15:25:28-02:00</updated>
     <id>http://diogolmenezes.github.io/blog/2014/01/21/creating-er-diagram-with-oracle-sql-developer</id>
-    <content type="html"><![CDATA[<p>Today I needed to create a ER diagram for my oracle database, and found that the Oracle Sql Developer is not so intuitive for this task.</p>
+    <content type="html"><![CDATA[<p>Today I needed to create a ER diagram for my oracle database, and realized that the Oracle Sql Developer is not so intuitive for this task.</p>
 
 <p>First you will have to open Oracle Sql Developer and go to:</p>
 
@@ -42,7 +42,7 @@
 <p>For export the diagram to image, PDF or SVG, you have to go to:</p>
 
 <p><code>
-File → Data Modeler → Print Diagram → and chose you option
+File → Data Modeler → Print Diagram → and choose you option
 </code></p>
 
 <p><img src="/images/posts/diagram-sql-developer-3.png" alt="Alt text" /></p>
