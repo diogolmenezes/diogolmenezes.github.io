@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: geral | dmenezes]]></title>
+  <link href="http://yoursite.com/blog/categories/geral/atom.xml" rel="self"/>
+  <link href="http://yoursite.com/"/>
+  <updated>2014-01-21T01:45:23-02:00</updated>
+  <id>http://yoursite.com/</id>
+  <author>
+    <name><![CDATA[Diogo Menezes]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Tudo novo denovo]]></title>
+    <link href="http://yoursite.com/blog/2014/01/20/tudo-novo-denovo/"/>
+    <updated>2014-01-20T21:01:51-02:00</updated>
+    <id>http://yoursite.com/blog/2014/01/20/tudo-novo-denovo</id>
+    <content type="html"><![CDATA[<p>Depois de alguns anos sem escrever artigos e sem atualizar meu site pessoal, resolvi botar a mão na massa e reativar esse projeto.</p>
+
+<p>Quero utilizar esse espaço para comentar sobre desenvolvimento de software e tudo mais que possa me interessar.</p>
+
+<h2>Escolhendo a nova plataforma</h2>
+
+<p>Para esse projeto, eu queria uma ferramenta que me possibilitasse ter um blog com o mínimo de esforço e que me permitisse utilizar <a href="http://pt.wikipedia.org/wiki/Markdown">markdown</a> para escrever os posts.</p>
+
+<p>Procurando possibilidades eu conheci o <a href="http://octopress.org/">Octopress</a>, um framework bem legal para o <a href="https://github.com/jekyll/jekyll">jekyll</a>, que é uma ferramenta <a href="https://www.ruby-lang.org/pt/">Ruby</a> que te possibilita gerar sites estáticos a partir de templates e markdowns.</p>
+
+<p>Estou gostando bastante da experiência pois além da velocidade da implantação do blog, criar posts markdown é espetacular.</p>
+
+<p>E você, conhece o Octopress? Qual a sua opinião sobre ele?</p>
+]]></content>
+  </entry>
+  
+</feed>
