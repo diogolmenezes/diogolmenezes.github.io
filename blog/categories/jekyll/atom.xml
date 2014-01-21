@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: jekyll | dmenezes]]></title>
-  <link href="http://yoursite.com/blog/categories/jekyll/atom.xml" rel="self"/>
-  <link href="http://yoursite.com/"/>
-  <updated>2014-01-21T01:45:23-02:00</updated>
-  <id>http://yoursite.com/</id>
+  <link href="http://diogolmenezes.github.io/blog/categories/jekyll/atom.xml" rel="self"/>
+  <link href="http://diogolmenezes.github.io/"/>
+  <updated>2014-01-21T02:00:14-02:00</updated>
+  <id>http://diogolmenezes.github.io/</id>
   <author>
     <name><![CDATA[Diogo Menezes]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Creating a blog with Octopress]]></title>
-    <link href="http://yoursite.com/blog/2014/01/21/criando-um-blog-com-octopress/"/>
+    <link href="http://diogolmenezes.github.io/blog/2014/01/21/criando-um-blog-com-octopress/"/>
     <updated>2014-01-21T00:17:04-02:00</updated>
-    <id>http://yoursite.com/blog/2014/01/21/criando-um-blog-com-octopress</id>
+    <id>http://diogolmenezes.github.io/blog/2014/01/21/criando-um-blog-com-octopress</id>
     <content type="html"><![CDATA[<p><a href="http://octopress.org/">Octopress</a> is a cool framework for <a href="https://github.com/jekyll/jekyll">jekyll</a>
 a blog-aware, static site generator in <a href="https://www.ruby-lang.org/pt/">Ruby</a> that allows you to create a static site based in templates, and markdowns files.</p>
 

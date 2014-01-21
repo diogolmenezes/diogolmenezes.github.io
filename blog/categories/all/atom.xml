@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: all | dmenezes]]></title>
+  <link href="http://diogolmenezes.github.io/blog/categories/all/atom.xml" rel="self"/>
+  <link href="http://diogolmenezes.github.io/"/>
+  <updated>2014-01-21T02:00:14-02:00</updated>
+  <id>http://diogolmenezes.github.io/</id>
+  <author>
+    <name><![CDATA[Diogo Menezes]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Everything new again]]></title>
+    <link href="http://diogolmenezes.github.io/blog/2014/01/20/everything-new-again/"/>
+    <updated>2014-01-20T21:01:51-02:00</updated>
+    <id>http://diogolmenezes.github.io/blog/2014/01/20/everything-new-again</id>
+    <content type="html"><![CDATA[<p>After a few years without writing articles and without updating my personal website, I decided to work to revive this project.</p>
+
+<p>I want to use this space to comment about software development and everything else that might interest me.</p>
+
+<h2>Choosing new platform</h2>
+
+<p>For this project, I wanted a tool that would allow me to have a blog with minimal effort and allowing me to use <a href="http://pt.wikipedia.org/wiki/Markdown">markdown</a> to write posts.</p>
+
+<p>Looking possibilities I met the <a href="http://octopress.org/">Octopress</a> a really nice framework for <a href="https://github.com/jekyll/jekyll">Jekyll</a>, which is a <a href="https://www.ruby-lang.org/pt/">Ruby</a> tool that enables you to generate static templates from websites and markdowns.</p>
+
+<p>I am enjoying the experience because beyond the speed of deployment of the blog, create <a href="http://pt.wikipedia.org/wiki/Markdown">markdown</a> posts is spectacular.</p>
+
+<p>And you, know <a href="http://octopress.org/">Octopress</a>? What is your opinion about it?</p>
+]]></content>
+  </entry>
+  
+</feed>

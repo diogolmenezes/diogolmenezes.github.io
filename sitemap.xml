@@ -1,31 +1,27 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://yoursite.com/blog/2010/05/17/removendo-acentos-de-uma-string/</loc>
-        <lastmod>2014-01-21T00:20:08-02:00</lastmod>
+        <loc>http://diogolmenezes.github.io/blog/2014/01/20/everything-new-again/</loc>
+        <lastmod>2014-01-21T01:58:03-02:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2014/01/20/tudo-novo-denovo/</loc>
-        <lastmod>2014-01-20T23:45:35-02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2014/01/21/criando-um-blog-com-octopress/</loc>
+        <loc>http://diogolmenezes.github.io/blog/2014/01/21/criando-um-blog-com-octopress/</loc>
         <lastmod>2014-01-21T01:45:23-02:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/about/</loc>
+        <loc>http://diogolmenezes.github.io/about/</loc>
         <lastmod>2014-01-20T23:49:07-02:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/archives/</loc>
-        <lastmod>2014-01-21T01:45:23-02:00</lastmod>
+        <loc>http://diogolmenezes.github.io/blog/archives/</loc>
+        <lastmod>2014-01-21T01:58:03-02:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/</loc>
-        <lastmod>2014-01-21T01:45:23-02:00</lastmod>
+        <loc>http://diogolmenezes.github.io/</loc>
+        <lastmod>2014-01-21T01:58:03-02:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/robots.txt</loc>
+        <loc>http://diogolmenezes.github.io/robots.txt</loc>
         <lastmod>2014-01-20T23:16:35-02:00</lastmod>
     </url>
 </urlset>
