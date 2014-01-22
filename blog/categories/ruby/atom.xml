@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby | dmenezes]]></title>
   <link href="http://diogolmenezes.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://diogolmenezes.github.io/"/>
-  <updated>2014-01-21T15:53:43-02:00</updated>
+  <updated>2014-01-22T00:18:03-02:00</updated>
   <id>http://diogolmenezes.github.io/</id>
   <author>
     <name><![CDATA[Diogo Menezes]]></name>
@@ -12,6 +12,41 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Using themes in octopress]]></title>
+    <link href="http://diogolmenezes.github.io/blog/2014/01/22/using-themes-in-octopress/"/>
+    <updated>2014-01-22T23:41:26-02:00</updated>
+    <id>http://diogolmenezes.github.io/blog/2014/01/22/using-themes-in-octopress</id>
+    <content type="html"><![CDATA[<p>Recently I talked about <a href="/blog/2014/01/21/creating-a-blog-with-octopress">how to create a blog with octopress</a>. Now I will try to teach you how to apply themes in your octopress blog.</p>
+
+<p>The process of configure themes on octopress is very simple, but before you will have to choose witch theme you will want to apply.</p>
+
+<p>You will find various themes <a href="https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes">here</a> and <a href="http://opthemes.com/">here</a>.</p>
+
+<p>For this example, I chose the <a href="https://github.com/macjasp/cleanpress">CleanPress</a> theme.</p>
+
+<p>Now the first step is clone the theme repository inside the .themes/ directory of your octopress blog.</p>
+
+<p><code>
+$ cd my_octo_blog
+$ git clone git://github.com/macjasp/cleanpress.git .themes/cleanpress
+</code></p>
+
+<p>Next, just install the theme and generate the static files this way:</p>
+
+<p><code>
+$ rake install['cleanpress']
+$ rake generate
+</code>
+Fire up the webserver and go to <a href="http://localhost:4000">http://localhost:4000</a>. If everything runs well your blog will be with the new theme.</p>
+
+<p><code>
+$ rake preview
+</code>
+You can create your own theme or edit existing themes too, its easy and makes your blog unique.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Creating a blog with Octopress]]></title>

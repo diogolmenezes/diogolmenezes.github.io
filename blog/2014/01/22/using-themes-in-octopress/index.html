@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Creating ER diagram with Oracle Sql Developer - dmenezes</title>
+  <title>Using themes in octopress - dmenezes</title>
   <meta name="author" content="Diogo Menezes">
 
    
@@ -19,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://diogolmenezes.github.io/blog/2014/01/21/creating-er-diagram-with-oracle-sql-developer">
+  <link rel="canonical" href="http://diogolmenezes.github.io/blog/2014/01/22/using-themes-in-octopress">
   <link href="/favicon.png" rel="icon">
   <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
@@ -89,7 +89,7 @@
 
   <header>
   <div class="jumbotron">
-    Creating ER Diagram With Oracle Sql Developer
+    Using Themes in Octopress
 	<h5>
 
 
@@ -102,36 +102,42 @@
   
 
 
-<i class="icon-calendar-empty"></i> <time datetime="2014-01-21T15:25:28-02:00" pubdate data-updated="true">Jan 21<span>st</span>, 2014</time></h5>
+<i class="icon-calendar-empty"></i> <time datetime="2014-01-22T23:41:26-02:00" pubdate data-updated="true">Jan 22<span>nd</span>, 2014</time></h5>
   </div>
 </header>
   <div class="row-fluid">
     <div class="span12">
-      <p>Today I needed to create a ER diagram for my oracle database, and realized that the Oracle Sql Developer is not so intuitive for this task.</p>
+      <p>Recently I talked about <a href="/blog/2014/01/21/creating-a-blog-with-octopress">how to create a blog with octopress</a>. Now I will try to teach you how to apply themes in your octopress blog.</p>
 
-<p>First you will have to open Oracle Sql Developer and go to:</p>
+<p>The process of configure themes on octopress is very simple, but before you will have to choose witch theme you will want to apply.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>File → Data Modeler → Import → Data Dictionary → select DB connection (or add if none) → Next → select your schema and tables</span></code></pre></td></tr></table></div></figure>
+<p>You will find various themes <a href="https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes">here</a> and <a href="http://opthemes.com/">here</a>.</p>
 
+<p>For this example, I chose the <a href="https://github.com/macjasp/cleanpress">CleanPress</a> theme.</p>
 
-<p><img src="/images/posts/diagram-sql-developer-1.png" alt="Alt text" /></p>
-
-<h2>Updating the diagram</h2>
-
-<p>If after making the diagram, you want to change it with the most recently database changes, you will need to select the changed table, click the right mouse button and choose Synchronize with Data Dictionary.</p>
-
-<p><img src="/images/posts/diagram-sql-developer-2.png" alt="Alt text" /></p>
-
-<h2>Exporting the diagram</h2>
-
-<p>For export the diagram to image, PDF or SVG, you have to go to:</p>
+<p>Now the first step is clone the theme repository inside the .themes/ directory of your octopress blog.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>File → Data Modeler → Print Diagram → and choose you option </span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cd my_octo_blog
+</span><span class='line'>$ git clone git://github.com/macjasp/cleanpress.git .themes/cleanpress</span></code></pre></td></tr></table></div></figure>
 
 
-<p><img src="/images/posts/diagram-sql-developer-3.png" alt="Alt text" /></p>
+<p>Next, just install the theme and generate the static files this way:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rake install['cleanpress']
+</span><span class='line'>$ rake generate</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Fire up the webserver and go to <a href="http://localhost:4000">http://localhost:4000</a>. If everything runs well your blog will be with the new theme.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rake preview</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can create your own theme or edit existing themes too, its easy and makes your blog unique.</p>
 
     </div>
   </div>
@@ -150,7 +156,11 @@
 
 
 
-  <a href="/blog/categories/oracle/"><span class="badge">oracle</span></a>
+  <a href="/blog/categories/jekyll/"><span class="badge">jekyll</span></a>
+
+  <a href="/blog/categories/octopress/"><span class="badge">octopress</span></a>
+
+  <a href="/blog/categories/ruby/"><span class="badge">ruby</span></a>
 
 
 
@@ -180,10 +190,8 @@
       <div class="span12">
         <p class="meta">
           
-            <a class="basic-alignment left" href="/blog/2014/01/21/creating-a-blog-with-octopress/" title="Previous Post: Creating a blog with Octopress">&laquo; Creating a blog with Octopress</a>
+            <a class="basic-alignment left" href="/blog/2014/01/21/creating-er-diagram-with-oracle-sql-developer/" title="Previous Post: Creating ER diagram with Oracle Sql Developer">&laquo; Creating ER diagram with Oracle Sql Developer</a>
           
-          
-            <a class="basic-alignment right" href="/blog/2014/01/22/using-themes-in-octopress/" title="Next Post: Using themes in octopress">Using themes in octopress &raquo;</a>
           
         </p>
       </div>
@@ -221,8 +229,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://diogolmenezes.github.io/blog/2014/01/21/creating-er-diagram-with-oracle-sql-developer/';
-        var disqus_url = 'http://diogolmenezes.github.io/blog/2014/01/21/creating-er-diagram-with-oracle-sql-developer/';
+        var disqus_identifier = 'http://diogolmenezes.github.io/blog/2014/01/22/using-themes-in-octopress/';
+        var disqus_url = 'http://diogolmenezes.github.io/blog/2014/01/22/using-themes-in-octopress/';
         var disqus_script = 'embed.js';
       
     (function () {
