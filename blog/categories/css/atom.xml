@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: css, | dmenezes]]></title>
+  <link href="http://diogolmenezes.github.io/blog/categories/css/atom.xml" rel="self"/>
+  <link href="http://diogolmenezes.github.io/"/>
+  <updated>2014-11-22T17:12:48-02:00</updated>
+  <id>http://diogolmenezes.github.io/</id>
+  <author>
+    <name><![CDATA[Diogo Menezes]]></name>
+    <email><![CDATA[diogolmenezes@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Creating a tooltip box with Css]]></title>
+    <link href="http://diogolmenezes.github.io/blog/2014/02/19/creating-a-tooltip-box-with-css/"/>
+    <updated>2014-02-19T15:59:04-03:00</updated>
+    <id>http://diogolmenezes.github.io/blog/2014/02/19/creating-a-tooltip-box-with-css</id>
+    <content type="html"><![CDATA[<p>When we manipulate edges with CSS, we can see that they are rendered with a 45 degree angles. This means that if we define some edges as transparent, we can modify the appearance of the object.</p>
+
+<p><img src="/images/posts/tooltip1.png" alt="Tooltip Image" /></p>
+
+<p><img src="/images/posts/tooltip2.png" alt="Tooltip Image" /></p>
+
+<p>Therefore, we can create triangles just setting its size to 0 and adjusting the size and transparency of the edges. As larger is the size of the border, greater is the size of the triangle.</p>
+
+<p><img src="/images/posts/tooltip3.png" alt="Tooltip Image" /></p>
+
+<p>```
+div {</p>
+
+<pre><code>width: 0px;
+padding: 0px;
+border:80px solid red;
+border-bottom-color:black;
+border-right-color:blue;
+border-left-color:green;
+</code></pre>
+
+<p>}
+```</p>
+
+<p>If we define 3 as transparent edges, we succeeded in isolating a triangle:</p>
+
+<p><img src="/images/posts/tooltip4.png" alt="Tooltip Image" /></p>
+
+<p>```
+div {</p>
+
+<pre><code>width: 0px;
+padding: 0px;
+border:30px solid transparent;
+border-left-color:blue;
+</code></pre>
+
+<p>}
+```</p>
+
+<h2>Tooltip</h2>
+
+<p>Now, using the pseudo-element :before we can place this triangle on the side of a div and create a tooltip box.</p>
+
+<p><img src="/images/posts/tooltip5.png" alt="Tooltip Image" /></p>
+
+<p>```</p>
+
+<p class="tooltip">This is a tooltip.</p>
+
+
+<p>```</p>
+
+<p>```
+.tooltip{</p>
+
+<pre><code>width:200px;
+padding: 20px;
+background:#963636;
+color:#FFF;
+position: relative;
+</code></pre>
+
+<p>}</p>
+
+<p>.tooltip:before{</p>
+
+<pre><code>border:10px solid transparent;
+border-right-color:#963636;
+content:"";
+position: absolute;
+left:-20px;
+</code></pre>
+
+<p>}
+```</p>
+
+<p>You can use a bit of JQuery to display this custom tooltip when the user hovers over a link.</p>
+
+<p><img src="/images/posts/tooltip6.png" alt="Tooltip Image" /></p>
+
+<p>```</p>
+
+<p><a href="#">link <span class="tooltip">This is only a tooltip example.</span></a> with tooltip</p>
+
+
+<p>```</p>
+
+<p>```
+a { position: relative; }</p>
+
+<p>.tooltip {</p>
+
+<pre><code>display: none;
+width:200px;
+padding: 20px;
+background:#963636;
+color:#FFF;
+position: absolute;
+top:-100px;
+left:-10px;
+</code></pre>
+
+<p>}</p>
+
+<p>.tooltip:before {</p>
+
+<pre><code>border:10px solid transparent;
+border-top-color:#963636;
+content:"";
+position: absolute;
+bottom:-20px;
+</code></pre>
+
+<p>}
+```</p>
+
+<p>```</p>
+
+<script type="text/javascript">
+    $(function() {
+      $('a').hover(function(){
+        $(this).find('.tooltip').show();
+      }, function(){
+        $(this).find('.tooltip').hide();
+      });
+
+    });
+</script>
+
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+</feed>

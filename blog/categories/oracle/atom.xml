@@ -4,14 +4,29 @@
   <title><![CDATA[Category: oracle | dmenezes]]></title>
   <link href="http://diogolmenezes.github.io/blog/categories/oracle/atom.xml" rel="self"/>
   <link href="http://diogolmenezes.github.io/"/>
-  <updated>2014-01-22T00:32:04-02:00</updated>
+  <updated>2014-11-22T17:12:48-02:00</updated>
   <id>http://diogolmenezes.github.io/</id>
   <author>
     <name><![CDATA[Diogo Menezes]]></name>
-    
+    <email><![CDATA[diogolmenezes@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to list active / open connections in Oracle?]]></title>
+    <link href="http://diogolmenezes.github.io/blog/2014/01/31/how-to-list-active-slash-open-connections-in-oracle/"/>
+    <updated>2014-01-31T13:19:51-02:00</updated>
+    <id>http://diogolmenezes.github.io/blog/2014/01/31/how-to-list-active-slash-open-connections-in-oracle</id>
+    <content type="html"><![CDATA[<p>If you are serching for a way to view all open/active connections at oracle, you can  use the v$session view.</p>
+
+<p><code>
+select * from v$session where username in ('MY_USERNAME');
+</code></p>
+
+<p>For more information about v$session you can go to the <a href="http://docs.oracle.com/cd/B19306_01/server.102/b14237/dynviews_2088.htm">official documentation</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Creating ER diagram with Oracle Sql Developer]]></title>

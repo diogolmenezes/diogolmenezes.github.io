@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: cordova | dmenezes]]></title>
+  <link href="http://diogolmenezes.github.io/blog/categories/cordova/atom.xml" rel="self"/>
+  <link href="http://diogolmenezes.github.io/"/>
+  <updated>2014-11-22T17:12:48-02:00</updated>
+  <id>http://diogolmenezes.github.io/</id>
+  <author>
+    <name><![CDATA[Diogo Menezes]]></name>
+    <email><![CDATA[diogolmenezes@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to open links at native browser using cordova]]></title>
+    <link href="http://diogolmenezes.github.io/blog/2014/11/22/how-to-open-links-at-native-browser-using-cordova/"/>
+    <updated>2014-11-22T17:06:53-02:00</updated>
+    <id>http://diogolmenezes.github.io/blog/2014/11/22/how-to-open-links-at-native-browser-using-cordova</id>
+    <content type="html"><![CDATA[<p>By default the links in cordova apps don&rsquo;t open at phone native web browser.</p>
+
+<p>To do this you have to install the inappbrowser plugin:</p>
+
+<p><code>
+$ cordova plugin add org.apache.cordova.inappbrowser
+</code></p>
+
+<p>And then you can use _system target to open the links in native browser:</p>
+
+<p>```
+<a href="http://tripolist.com" target="_system">Open Tripolist</a></p>
+
+<p>or</p>
+
+<p>window.open(&ldquo;<a href="http://tripolist.com">http://tripolist.com</a>&rdquo;, &ldquo;_system&rdquo;);
+```</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: mvc | dmenezes]]></title>
+  <link href="http://diogolmenezes.github.io/blog/categories/mvc/atom.xml" rel="self"/>
+  <link href="http://diogolmenezes.github.io/"/>
+  <updated>2014-11-22T17:12:48-02:00</updated>
+  <id>http://diogolmenezes.github.io/</id>
+  <author>
+    <name><![CDATA[Diogo Menezes]]></name>
+    <email><![CDATA[diogolmenezes@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Including HtmlAttributes dynamically on mvc helper]]></title>
+    <link href="http://diogolmenezes.github.io/blog/2014/02/05/including-htmlattributes-dynamically-on-mvc-helper/"/>
+    <updated>2014-02-05T16:57:57-02:00</updated>
+    <id>http://diogolmenezes.github.io/blog/2014/02/05/including-htmlattributes-dynamically-on-mvc-helper</id>
+    <content type="html"><![CDATA[<p>If you are working on a .Net MVC application and need to include a HtmlAttributes dynamically on mvc helper, you should know that its not so simple.</p>
+
+<p>Lets say that you want to include dynamically a disable attribute if one condition is true. Typically, you do this:</p>
+
+<p>```
+if(canEdit)
+{</p>
+
+<pre><code>@Html.TextBoxFor(x=&gt; x.Name, new { maxlength = "50" })
+</code></pre>
+
+<p>}
+else
+{</p>
+
+<pre><code>@Html.TextBoxFor(x=&gt; x.Name, new { maxlength = "50", disabled="disabled"})
+</code></pre>
+
+<p>}
+```</p>
+
+<p>We must to agree that its not beautiful. So lets create a extension method to do this job:</p>
+
+<p>```
+namespace MyNameSpace
+{</p>
+
+<pre><code>public static class ExtensionMethods
+{
+    public static RouteValueDictionary DisabledIf(this object htmlAttributes, bool disabled)
+    {
+        return htmlAttributes.AppendIf(disabled, "disabled", "disabled");
+    }
+
+    public static RouteValueDictionary AppendIf(this object htmlAttributes, bool condition, string attributeName, string attributeValue)
+    {
+        var attributes = new RouteValueDictionary(htmlAttributes);
+
+        if (condition)
+            attributes[attributeName] = attributeValue;
+
+        return attributes;
+    }
+}
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Now you only have to call the extension method passing the condition to disable the field:</p>
+
+<p><code>
+ @Html.TextBoxFor(x=&gt; x.Name, new { maxlength = "50" }.DisabledIf(!canEdit))
+</code></p>
+
+<p>You also can use the AppendIf to append other attributes:</p>
+
+<p><code>
+ @Html.TextBoxFor(x=&gt; x.Name, new { maxlength = "50" }.AppendIf(DateTime.Now.Day == 29, "onfocus", "alert('Today is 29, lets eat Gnocchi')"))
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

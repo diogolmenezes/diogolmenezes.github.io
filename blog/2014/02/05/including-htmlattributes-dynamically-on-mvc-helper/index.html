@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Creating ER diagram with Oracle Sql Developer - dmenezes</title>
+  <title>Including HtmlAttributes dynamically on mvc helper - dmenezes</title>
   <meta name="author" content="Diogo Menezes">
 
    
@@ -19,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://diogolmenezes.github.io/blog/2014/01/21/creating-er-diagram-with-oracle-sql-developer">
+  <link rel="canonical" href="http://diogolmenezes.github.io/blog/2014/02/05/including-htmlattributes-dynamically-on-mvc-helper">
   <link href="/favicon.png" rel="icon">
   <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
@@ -91,7 +91,7 @@
 
   <header>
   <div class="jumbotron">
-    Creating ER Diagram With Oracle Sql Developer
+    Including HtmlAttributes Dynamically on Mvc Helper
 	<h5>
 
 
@@ -104,36 +104,88 @@
   
 
 
-<i class="icon-calendar-empty"></i> <time datetime="2014-01-21T15:25:28-02:00" pubdate data-updated="true">Jan 21<span>st</span>, 2014</time></h5>
+<i class="icon-calendar-empty"></i> <time datetime="2014-02-05T16:57:57-02:00" pubdate data-updated="true">Feb 5<span>th</span>, 2014</time></h5>
   </div>
 </header>
   <div class="row-fluid">
     <div class="span12">
-      <p>Today I needed to create a ER diagram for my oracle database, and realized that the Oracle Sql Developer is not so intuitive for this task.</p>
+      <p>If you are working on a .Net MVC application and need to include a HtmlAttributes dynamically on mvc helper, you should know that its not so simple.</p>
 
-<p>First you will have to open Oracle Sql Developer and go to:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>File → Data Modeler → Import → Data Dictionary → select DB connection (or add if none) → Next → select your schema and tables</span></code></pre></td></tr></table></div></figure>
-
-
-<p><img src="/images/posts/diagram-sql-developer-1.png" alt="Alt text" /></p>
-
-<h2>Updating the diagram</h2>
-
-<p>If after making the diagram, you want to change it with the most recently database changes, you will need to select the changed table, click the right mouse button and choose Synchronize with Data Dictionary.</p>
-
-<p><img src="/images/posts/diagram-sql-developer-2.png" alt="Alt text" /></p>
-
-<h2>Exporting the diagram</h2>
-
-<p>For export the diagram to image, PDF or SVG, you have to go to:</p>
+<p>Lets say that you want to include dynamically a disable attribute if one condition is true. Typically, you do this:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>File → Data Modeler → Print Diagram → and choose you option </span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>if(canEdit)
+</span><span class='line'>{
+</span><span class='line'>    @Html.TextBoxFor(x=&gt; x.Name, new { maxlength = "50" })
+</span><span class='line'>}
+</span><span class='line'>else
+</span><span class='line'>{
+</span><span class='line'>    @Html.TextBoxFor(x=&gt; x.Name, new { maxlength = "50", disabled="disabled"})
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
 
 
-<p><img src="/images/posts/diagram-sql-developer-3.png" alt="Alt text" /></p>
+<p>We must to agree that its not beautiful. So lets create a extension method to do this job:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>namespace MyNameSpace
+</span><span class='line'>{
+</span><span class='line'>    public static class ExtensionMethods
+</span><span class='line'>    {
+</span><span class='line'>        public static RouteValueDictionary DisabledIf(this object htmlAttributes, bool disabled)
+</span><span class='line'>        {
+</span><span class='line'>            return htmlAttributes.AppendIf(disabled, "disabled", "disabled");
+</span><span class='line'>        }
+</span><span class='line'>
+</span><span class='line'>        public static RouteValueDictionary AppendIf(this object htmlAttributes, bool condition, string attributeName, string attributeValue)
+</span><span class='line'>        {
+</span><span class='line'>            var attributes = new RouteValueDictionary(htmlAttributes);
+</span><span class='line'>
+</span><span class='line'>            if (condition)
+</span><span class='line'>                attributes[attributeName] = attributeValue;
+</span><span class='line'>
+</span><span class='line'>            return attributes;
+</span><span class='line'>        }
+</span><span class='line'>    }
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now you only have to call the extension method passing the condition to disable the field:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> @Html.TextBoxFor(x=&gt; x.Name, new { maxlength = "50" }.DisabledIf(!canEdit))</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You also can use the AppendIf to append other attributes:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> @Html.TextBoxFor(x=&gt; x.Name, new { maxlength = "50" }.AppendIf(DateTime.Now.Day == 29, "onfocus", "alert('Today is 29, lets eat Gnocchi')"))</span></code></pre></td></tr></table></div></figure>
+
 
     </div>
   </div>
@@ -152,7 +204,9 @@
 
 
 
-  <a href="/blog/categories/oracle/"><span class="badge">oracle</span></a>
+  <a href="/blog/categories/mvc/"><span class="badge">mvc</span></a>
+
+  <a href="/blog/categories/razor/"><span class="badge">razor</span></a>
 
 
 
@@ -182,10 +236,10 @@
       <div class="span12">
         <p class="meta">
           
-            <a class="basic-alignment left" href="/blog/2014/01/21/creating-a-blog-with-octopress/" title="Previous Post: Creating a blog with Octopress">&laquo; Creating a blog with Octopress</a>
+            <a class="basic-alignment left" href="/blog/2014/01/31/how-to-list-active-slash-open-connections-in-oracle/" title="Previous Post: How to list active / open connections in Oracle?">&laquo; How to list active / open connections in Oracle?</a>
           
           
-            <a class="basic-alignment right" href="/blog/2014/01/22/how-to-generate-a-guid-with-javascript/" title="Next Post: How to generate a GUID with javascript">How to generate a GUID with javascript &raquo;</a>
+            <a class="basic-alignment right" href="/blog/2014/02/19/creating-a-tooltip-box-with-css/" title="Next Post: Creating a tooltip box with Css">Creating a tooltip box with Css &raquo;</a>
           
         </p>
       </div>
@@ -223,8 +277,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://diogolmenezes.github.io/blog/2014/01/21/creating-er-diagram-with-oracle-sql-developer/';
-        var disqus_url = 'http://diogolmenezes.github.io/blog/2014/01/21/creating-er-diagram-with-oracle-sql-developer/';
+        var disqus_identifier = 'http://diogolmenezes.github.io/blog/2014/02/05/including-htmlattributes-dynamically-on-mvc-helper/';
+        var disqus_url = 'http://diogolmenezes.github.io/blog/2014/02/05/including-htmlattributes-dynamically-on-mvc-helper/';
         var disqus_script = 'embed.js';
       
     (function () {

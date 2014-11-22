@@ -1,0 +1,400 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Creating a tooltip box with Css - dmenezes</title>
+  <meta name="author" content="Diogo Menezes">
+
+   
+  <meta name="description" content="">
+  
+  <meta name="keywords" content="">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://diogolmenezes.github.io/blog/2014/02/19/creating-a-tooltip-box-with-css">
+  <link href="/favicon.png" rel="icon">
+  <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="dmenezes" type="application/atom+xml">
+  <script src="/js/jquery.js"></script>
+  <script src="/js/bootstrap-collapse.js"></script>
+  <script src="/js/modernizr-2.0.js"></script>
+  <script src="/js/octopress.js" type="text/javascript"></script>
+  <script src="/js/application.js"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <div class="navbar navbar-inverse navbar-static-top">
+  	<div class="navbar-inner">
+  	  <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="fui-menu-24"></span>
+        </a>
+  	  	<div class="nav-collapse collapse navbar-responsive-collapse" style="height:0;">
+  	      <ul class="nav">
+    
+        <li ><a href="/index.html">Home</a></li>
+    
+        <li ><a href="/about">About</a></li>
+    
+        <li ><a href="/blog/archives">Archive</a></li>
+    
+        <li ><a href="/tools">Tools</a></li>
+    
+        <li ><a href="/atom.xml">Rss</a></li>
+    
+</ul>
+
+<ul class="nav pull-right">
+    
+    <li><a href="http://github.com/diogolmenezes" title="Github Profile"><i class="icon-github-sign social-navbar"></i></a></li>
+    
+    
+    
+    
+    <li><a href="http://twitter.com/diogolmenezes" title="Twitter Profile"><i class="icon-twitter-sign social-navbar"></i></a></li>
+    
+    
+    
+    
+
+    
+    <li><a href="mailto:diogolmenezes@gmail.com" title="Email"><i class="icon-envelope-alt social-navbar"></i></a></li>
+    
+</ul>
+
+  	    </div>
+  	  </div>
+  	</div>
+  </div>
+  <div class="container" id="main">
+      <div class="row-fluid">
+        <div id="content">
+          <div>
+<article class="hentry" role="article">
+  
+
+  <header>
+  <div class="jumbotron">
+    Creating a Tooltip Box With Css
+	<h5>
+
+
+
+
+
+
+
+
+  
+
+
+<i class="icon-calendar-empty"></i> <time datetime="2014-02-19T15:59:04-03:00" pubdate data-updated="true">Feb 19<span>th</span>, 2014</time></h5>
+  </div>
+</header>
+  <div class="row-fluid">
+    <div class="span12">
+      <p>When we manipulate edges with CSS, we can see that they are rendered with a 45 degree angles. This means that if we define some edges as transparent, we can modify the appearance of the object.</p>
+
+<p><img src="/images/posts/tooltip1.png" alt="Tooltip Image" /></p>
+
+<p><img src="/images/posts/tooltip2.png" alt="Tooltip Image" /></p>
+
+<p>Therefore, we can create triangles just setting its size to 0 and adjusting the size and transparency of the edges. As larger is the size of the border, greater is the size of the triangle.</p>
+
+<p><img src="/images/posts/tooltip3.png" alt="Tooltip Image" /></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>div {
+</span><span class='line'>    width: 0px;
+</span><span class='line'>    padding: 0px;
+</span><span class='line'>    border:80px solid red;
+</span><span class='line'>    border-bottom-color:black;
+</span><span class='line'>    border-right-color:blue;
+</span><span class='line'>    border-left-color:green;
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If we define 3 as transparent edges, we succeeded in isolating a triangle:</p>
+
+<p><img src="/images/posts/tooltip4.png" alt="Tooltip Image" /></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>div {
+</span><span class='line'>    width: 0px;
+</span><span class='line'>    padding: 0px;
+</span><span class='line'>    border:30px solid transparent;
+</span><span class='line'>    border-left-color:blue;
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Tooltip</h2>
+
+<p>Now, using the pseudo-element :before we can place this triangle on the side of a div and create a tooltip box.</p>
+
+<p><img src="/images/posts/tooltip5.png" alt="Tooltip Image" /></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;p class="tooltip"&gt;This is a tooltip.&lt;/p&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>.tooltip{
+</span><span class='line'>    width:200px;
+</span><span class='line'>    padding: 20px;
+</span><span class='line'>    background:#963636;
+</span><span class='line'>    color:#FFF;
+</span><span class='line'>    position: relative;
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>.tooltip:before{
+</span><span class='line'>    border:10px solid transparent;
+</span><span class='line'>    border-right-color:#963636;
+</span><span class='line'>    content:"";
+</span><span class='line'>    position: absolute;
+</span><span class='line'>    left:-20px;
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can use a bit of JQuery to display this custom tooltip when the user hovers over a link.</p>
+
+<p><img src="/images/posts/tooltip6.png" alt="Tooltip Image" /></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;p&gt;&lt;a href="#"&gt;link &lt;span class="tooltip"&gt;This is only a tooltip example.&lt;/span&gt;&lt;/a&gt; with tooltip&lt;/p&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>a { position: relative; }
+</span><span class='line'>
+</span><span class='line'>.tooltip {
+</span><span class='line'>    display: none;
+</span><span class='line'>    width:200px;
+</span><span class='line'>    padding: 20px;
+</span><span class='line'>    background:#963636;
+</span><span class='line'>    color:#FFF;
+</span><span class='line'>    position: absolute;
+</span><span class='line'>    top:-100px;
+</span><span class='line'>    left:-10px;
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>.tooltip:before {
+</span><span class='line'>    border:10px solid transparent;
+</span><span class='line'>    border-top-color:#963636;
+</span><span class='line'>    content:"";
+</span><span class='line'>    position: absolute;
+</span><span class='line'>    bottom:-20px;
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;script type="text/javascript"&gt;
+</span><span class='line'>    $(function() {
+</span><span class='line'>      $('a').hover(function(){
+</span><span class='line'>        $(this).find('.tooltip').show();
+</span><span class='line'>      }, function(){
+</span><span class='line'>        $(this).find('.tooltip').hide();
+</span><span class='line'>      });
+</span><span class='line'>
+</span><span class='line'>    });
+</span><span class='line'>&lt;/script&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+    </div>
+  </div>
+
+
+
+  <footer>
+    <hr>
+    
+    <div class="row-fluid">
+      
+      <div class="span6">
+        <p class="meta">
+        
+        
+
+
+
+  <a href="/blog/categories/css,/"><span class="badge">css,</span></a>
+
+  <a href="/blog/categories/jquery/"><span class="badge">jquery</span></a>
+
+
+
+
+        </p>
+      </div>
+      
+      <div class="span6 social-sharing">
+        <div class="sharing">
+  <div class="addthis_toolbox addthis_default_style ">
+  
+  
+  <a class="addthis_button_tweet"></a>
+  
+  
+  <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+      </div>
+      
+      
+    </div>
+    
+    <div class="row-fluid">
+      <div class="span12">
+        <p class="meta">
+          
+            <a class="basic-alignment left" href="/blog/2014/02/05/including-htmlattributes-dynamically-on-mvc-helper/" title="Previous Post: Including HtmlAttributes dynamically on mvc helper">&laquo; Including HtmlAttributes dynamically on mvc helper</a>
+          
+          
+            <a class="basic-alignment right" href="/blog/2014/11/22/how-to-open-links-at-native-browser-using-cordova/" title="Next Post: How to open links at native browser using cordova">How to open links at native browser using cordova &raquo;</a>
+          
+        </p>
+      </div>
+    </div>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+
+
+        </div>
+      </div>
+      <div class="row-fluid">
+        <footer class="footer-page" role="contentinfo">
+          <p>
+  Copyright &copy; 2014 - Diogo Menezes -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span> - Theme by <a href="http://alexgaribay.com">Alex Garibay</a>
+</p>
+
+
+        </footer>
+      </div>
+  </div>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'dmenezes';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://diogolmenezes.github.io/blog/2014/02/19/creating-a-tooltip-box-with-css/';
+        var disqus_url = 'http://diogolmenezes.github.io/blog/2014/02/19/creating-a-tooltip-box-with-css/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
