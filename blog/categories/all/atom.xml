@@ -4,7 +4,7 @@
   <title><![CDATA[Category: all | dmenezes]]></title>
   <link href="http://diogolmenezes.github.io/blog/categories/all/atom.xml" rel="self"/>
   <link href="http://diogolmenezes.github.io/"/>
-  <updated>2014-11-22T17:12:48-02:00</updated>
+  <updated>2014-11-23T02:13:50-02:00</updated>
   <id>http://diogolmenezes.github.io/</id>
   <author>
     <name><![CDATA[Diogo Menezes]]></name>
@@ -12,6 +12,41 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to create the cordova app release version]]></title>
+    <link href="http://diogolmenezes.github.io/blog/2014/11/23/how-to-create-the-cordova-app-release-version/"/>
+    <updated>2014-11-23T02:02:42-02:00</updated>
+    <id>http://diogolmenezes.github.io/blog/2014/11/23/how-to-create-the-cordova-app-release-version</id>
+    <content type="html"><![CDATA[<p>If you want to put your app at google play store, you will need a signed release version of the app.</p>
+
+<p>To do this, the first step is to generate the release key running the following command:</p>
+
+<p><code>
+keytool -genkey -v -keystore ~/.certs/your_app_release.keystore -alias your_app_release -keyalg RSA -keysize 2048 -validity 100000
+</code></p>
+
+<p>After that you will need to set this key in the <strong><em>ant.properties</em></strong> file. This file  is normally
+located at <strong><em>cordova_app_dir/platforms/android/</em></strong>, but if you dont find it, you can create this file.</p>
+
+<p>In my case I needed to create the file and put this content:</p>
+
+<p><code>
+key.store=~/.certs/your_app_release.keystore
+key.alias=your_app_release
+</code></p>
+
+<p>Finaly you will need to compile the release version. In <strong><em>platform/android</em></strong> directory run the command:</p>
+
+<p><code>
+ant release
+</code></p>
+
+<p>Now, you can send the signed APK located at <strong><em>platform/android/bin</em></strong> to the <a href="https://play.google.com/apps/publish">Google Play Store</a>.</p>
+
+<p>If you still have doubts <a href="http://himanen.info/publishing-android-app-to-google-play-store-with-cordova-cli/">read this</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to open links at native browser using cordova]]></title>
